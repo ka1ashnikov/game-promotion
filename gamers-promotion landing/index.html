@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/styles/styles.css">
-    <title>Twitch Stats</title>
+    <title>Gamers Promotion</title>
 </head>
 <body>
-
     <header id="head">
         <nav>
             <ul>
@@ -16,21 +15,31 @@
             </ul>
         </nav>
         <div class="search-box">
-          <input type="text" class="input-box" placeholder="Find Steamer...">
+          <input type="text" class="input-box" placeholder="Find Player...">
           <button class="find-button"><img src="/gamers-promotion landing/static/img/icons8-search-128.png"></button>
         </div>
-        <script>
-            const searchButton = document.querySelector('.search-box button');
-    
-            searchButton.addEventListener('mouseover', function() {
-                this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'; // Изменяем цвет фона при наведении
-            });
-    
-            searchButton.addEventListener('mouseout', function() {
-                this.style.backgroundColor = 'rgba(255, 255, 255, 0.038)'; // Сбрасываем цвет фона при уводе курсора
-            });
-        </script>
     </header>
+
+
+    <div class="panel-container">
+        <section class="panel" id="panel1">
+            <div class="player-panel">
+                <div class="player-img">
+                    <img src="static/img/m0nesy (1).png" >
+                </div>
+                <div class="player-info">
+                    <h2>Стример Twitch #1</h2>
+                    <p>Информация о первом стримере на Twitch. Здесь можно добавить описание, расписание стримов, популярные игры и другую связанную информацию.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="shape-1"></div>
+    <div class="shape-2"></div>
+    <div class="shape-3"></div>
+    <div class="shape-4"></div>
+    <div class="shape-5"></div>
+    <script src="scripts/app.js"></script>
     <script>
         window.addEventListener('scroll', function() {
             var header= document.querySelector('header');
@@ -42,6 +51,7 @@
                 header.style.width = 'auto';
                 header.style.height = 'auto';
                 header.style.backdropFilter = 'blur(10px)'; // Цвет фона
+                header.style.webkitBackdropFilter = 'blur(10px)';
                 header.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)'; // Тень
                 header.style.zIndex = '1000';
                 header.style.borderRadius = '20px';
@@ -54,38 +64,22 @@
             }
         });
     </script>
-    <section class="panel" id="panel1">
-        <div class="player-panel">
-            <div class="player-img">
-                <img src="static/img/m0nesy (1).png" >
-            </div>
-            <div class="player-info">
-                <h2>Стример Twitch #1</h2>
-                <p>Информация о первом стримере на Twitch. Здесь можно добавить описание, расписание стримов, популярные игры и другую связанную информацию.</p>
-            </div>
-        </div>
-    </section>
-    <script src="scripts/app.js"></script>
+    <script>
+        const searchButton = document.querySelector('.search-box button');
+
+        searchButton.addEventListener('mouseover', function() {
+            this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'; // Изменяем цвет фона при наведении
+        });
+
+        searchButton.addEventListener('mouseout', function() {
+            this.style.backgroundColor = 'rgba(255, 255, 255, 0.038)'; // Сбрасываем цвет фона при уводе курсора
+        });
+    </script>
     <footer>
         <div class="privacy">
             <a href="#">Политика конфиденциальности</a>
         </div>
         <p class="trademark"> dev. ka1ash</p>
     </footer>
-    <div class="shape-1">
-
-    </div>
-    <div class="shape-2">
-
-    </div>
-    <div class="shape-3">
-
-    </div>
-    <div class="shape-4">
-
-    </div>
-    <div class="shape-5">
-
-    </div>
 </body>
 </html>
