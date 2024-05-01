@@ -1,3 +1,8 @@
+@font-face{
+    font-family: 'Bebas';
+    src: url('../fonts/bebas.otf')
+}
+
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0;
@@ -20,20 +25,39 @@ body::before {
     filter: blur(20px);
     z-index: -1; /* Убедитесь, что этот слой поверх остального содержимого, но ниже модальных окон/всплывающих элементов */
 }
-@keyframes typing {
-    0% { width: 0ch; }
-    30% { width: 5ch; }
-    60% { width: 10ch; }
-    90% { width: 15ch; }
-    100% { width: 20ch; }
+
+.gg-search {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 4px;
+    height: 4px;
+    border: 2px solid;
+    border-radius: 100%;
+    margin-left: -4px;
+    margin-top: -4px
+}
+.gg-search::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 0.5px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(-45deg);
+    top: 10px;
+    left: 12px
 }
 
-@keyframes blink-cursor {
-    from, to { border-color: transparent; }
-    50% { border-color: black; }
+.logo{
+    font-family: 'Bebas';
+    font-size: 30px;
+    letter-spacing: 2px;
+
 }
-
-
 .search-box input::placeholder {
 animation: typing 4s steps(20, end), blink-cursor .75s step-end infinite;
 white-space: nowrap;
@@ -275,6 +299,18 @@ footer {
   100% {
     background-position: 0% center;
   }
+}
+@keyframes typing {
+    0% { width: 0ch; }
+    30% { width: 5ch; }
+    60% { width: 10ch; }
+    90% { width: 15ch; }
+    100% { width: 20ch; }
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
 }
 
 /* Общий стиль скроллбара */
