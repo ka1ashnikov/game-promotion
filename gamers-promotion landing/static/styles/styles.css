@@ -1,0 +1,273 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 300% 400%;
+    animation: gradient 40s ease-in-out infinite;
+}
+.shape-1 {
+    position: absolute;
+    width: 50%;
+    top: 50px;
+    filter: blur(40px);
+  }
+  
+.shape-1:after {
+   
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: rgba(85, 250, 121, 0.52);
+    border-radius: 2%;
+    transform: rotate(50deg);
+    top: 0;
+    right: 0;
+    z-index: -1;
+    top: 10%; /* change value as required */
+    right: -20%; /* change value as required */
+}
+
+.shape-2 {
+    position: absolute;
+    width: 10%;
+    top: 50px;
+    filter: blur(40px);
+  }
+.shape-2:after {
+
+    content: '';
+    position: absolute;
+    width: 0;
+    transform: rotate(40deg);
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgba(85, 250, 121, 0.52);;
+    top: 0;
+    right: 0;
+    top: -20%; /* change value as required */
+    right: -20%; /* change value as required */
+}
+.shape-3 {
+    position: absolute;
+    width: 20%;
+    top: 500px;
+    filter: blur(40px);
+  }
+.shape-3:after {
+
+    content: '';
+    position: absolute;
+    width: 0;
+    transform: rotate(40deg);
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 500px solid rgba(85, 250, 121, 0.52);;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    top: 10%; /* change value as required */
+    right: -20%; /* change value as required */
+}
+.shape-4 {
+    position: absolute;
+    width: 70%;
+    top: 400px;
+    filter: blur(40px);
+  }
+.shape-4:after {
+
+    content: '';
+    position: absolute;
+    width: 0;
+    transform: rotate(-46deg);
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 180px solid rgba(85, 250, 121, 0.52);;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    top: 10%; /* change value as required */
+    right: -20%; /* change value as required */
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.091);
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: all 1s ease;
+    border-radius: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #bbb;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #bbb;
+}
+
+
+.player-panel {
+    background-color: rgba(255, 255, 255, 0.11);
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+}
+.player-img{
+    float: left;
+}
+
+.player-info{
+
+}
+
+.player-img img{
+    width: 100px;
+    height: 100px;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.privacy a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.privacy a:hover {
+    color: #bbb;
+}
+
+.input-box::placeholder{
+    color: #ffffff94;
+}
+
+.search-box {
+    position: relative;
+    display: inline-block;
+}
+
+.search-box input[type="text"] {
+    font-family: 'Rubik';
+    padding: 10px;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 10px;
+    border-radius: 45px;
+    outline: none;
+    background: rgba(255, 254, 255, 0.034); /* Добавляем градиентный фон */
+    background-size: 200% auto; /* Устанавливаем размер градиента */
+    color: #fff;
+}
+
+.search-box input[type="text"]:focus {
+    animation: gradientAnimation 3s ease infinite; /* Добавляем анимацию переливания фона при фокусе */
+}
+
+.search-box img{
+    height: 10px;
+    width: 10px;
+}
+
+.search-box button {
+ /* Фиолетовый цвет для кнопки */
+    font-family: 'Rubik';
+    color: #fff;
+    padding: 10px;
+    background-color: rgba(255, 254, 255, 0.034);
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 45px; /* Закругленные грани */
+}
+
+.search-box button:hover {
+    background-color: rgba(255, 255, 255, 0.11); /* Темно-фиолетовый цвет при наведении */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+/* .main-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 80%;
+    border: 1px solid #000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.subpanels {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.subpanel {
+    flex: 1;
+    border: 1px solid #000;
+    margin: 0 10px;
+    padding: 10px;
+    box-sizing: border-box;
+} */
