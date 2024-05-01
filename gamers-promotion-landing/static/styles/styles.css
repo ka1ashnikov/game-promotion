@@ -3,7 +3,7 @@
     src: url('../fonts/bebas.otf')
 }
 @font-face{
-    font-family: 'Bebas';
+    font-family: 'Bebas1';
     src: url('../fonts/bebas.woff')
 }
 
@@ -57,9 +57,9 @@ body::before {
 }
 
 .logo{
-    font-family: 'Bebas';
-    font-size: 30px;
-    letter-spacing: 2px;
+    font-family: 'Rubik';
+    font-size: 15px;
+    letter-spacing: 0.5px;
 
 }
 .search-box input::placeholder {

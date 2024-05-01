@@ -1,5 +1,5 @@
 async function getAllStreamers () {
-    const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const streamers = await res.json();
     
     streamers.forEach(streamer => streamersToHTML(streamer));
@@ -7,7 +7,7 @@ async function getAllStreamers () {
 }
 
 
-function streamersToHTML({id,title}){
+function streamersToHTML({id,name}){
     const path = document.getElementById('panel1')
     const html = 
     `    
@@ -17,7 +17,7 @@ function streamersToHTML({id,title}){
                 <img src="static/img/m0nesy (1).png" >
             </div>
             <div class="player-info">
-                <h2>${title}</h2>
+                <h2>${name}</h2>
                 <p>Информация о первом стримере на Twitch. Здесь можно добавить описание, расписание стримов, популярные игры и другую связанную информацию.</p>
             </div>
         </div>
