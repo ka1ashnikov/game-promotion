@@ -2,6 +2,10 @@
     font-family: 'Bebas';
     src: url('../fonts/bebas.otf')
 }
+@font-face{
+    font-family: 'Bebas';
+    src: url('../fonts/bebas.woff')
+}
 
 body {
     font-family: 'Rubik', sans-serif;
